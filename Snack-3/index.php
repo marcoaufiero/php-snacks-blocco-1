@@ -41,13 +41,22 @@ $posts = [
 ];
 
 $keys = array_keys($posts);
+
 for($i = 0; $i < count($posts); $i++){
+    
     echo $keys[$i];
     echo '<br/>';
-    foreach($posts[$keys[$i]] as $key => $value){
-        echo $posts[$keys[$i]]['title'];
-    };
-   
+    
+    for($k = 0; $k < count($posts[$keys[$i]]); $k++){
+        echo $posts[$keys[$i]][$k]['title'];
+        echo '<br/>';
+        echo $posts[$keys[$i]][$k]['author'];
+        echo '<br/>';
+        echo $posts[$keys[$i]][$k]['text'];
+        echo '<br/>';
+        echo '<br/>';
+
+    }
 };
     
     
